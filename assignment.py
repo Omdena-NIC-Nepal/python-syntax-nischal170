@@ -41,8 +41,9 @@ def set_operations(list1, list2):
 
 def arithmetic_ops(a, b):
 
+
     
-    return  {"sum":int(f"{a+b}"),"difference":int(f"{a-b}"),"product":int(f"{a*b}"),"quotient":int(f"{(a/b) if b!=0 else "undefined"}")}
+    return  {"sum":int({a+b}),"difference":int({a-b}),"product":int({a*b}),"quotient":int({(a/b) if b!=0 else "undefined"})}
 
 def logical_ops(x, y):
     return{
