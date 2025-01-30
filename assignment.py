@@ -1,6 +1,5 @@
 def format_string(name, age):
   
-    
     return f"My name is {name} and I am {age} years old"
 
 def conditional_check(number):
@@ -8,35 +7,37 @@ def conditional_check(number):
         return "Greater"
     if number<10:
         return "Lesser"
-    if number>10:
+    elif number==10: 
         return "Equal"
    
 
 def loop_sum(n):
     sum=0
-    for i in range(n):
+    for i in range(1,n+1):
         sum=sum+i
     return sum
 
 
 def list_operations(numbers):
-    new_tuple=tuple(numbers)
-    return new_tuple
+    tup=[]
+    sorted=sorted(numbers)
+    min=sorted[0]
+    max=sorted[-1]
+    sum_num=sum(numbers)
+    return (sum_num,min,max)
 
 def dict_operations(students_dict):
-    
-    
-    
-    student_list=list()
+    student_list=[]
     for student in students_dict:
-        if student.score > 80:
-            student_list.append(student.name)
-            return student_list
+        if students_dict[student] > 80:
+            student_list.append(student)
+    return student_list
     
 
 def set_operations(list1, list2):
-    list3=list1 & list2
-    return list3
+    set1=set(list1)
+    set2=set(list2)
+    return set1 & set2
     
 
 def arithmetic_ops(a, b):
@@ -44,7 +45,7 @@ def arithmetic_ops(a, b):
     return  dict(sum=f"{a+b}",difference=f"{a-b}",product=f"{a*b}",quotient=f"{a/b}")
 
 def logical_ops(x, y):
-    {
+    return{
         'and': x and y, 
         'or': x or y,    
         'not_x': not x   
@@ -53,7 +54,8 @@ def logical_ops(x, y):
 def bitwise_ops(a, b):
     return {
         'and': a & b,   
-        'or': a | b,   
+        'or': a | b,
+        'xor':a^b,  
         'not_a': ~a     
     }
    
