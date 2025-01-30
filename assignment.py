@@ -1,94 +1,59 @@
 def format_string(name, age):
-    """
-    Create a formatted string using f-strings.
-    Args:
-        name (str): Person's name
-        age (int): Person's age
-    Returns:
-        str: Formatted string
-    """
-    pass
+  
+    
+    return f"My name is {name} and I am {age} years old"
 
 def conditional_check(number):
-    """
-    Check if a number is greater, lesser, or equal to 10.
-    Args:
-        number (int): Number to check
-    Returns:
-        str: "Greater", "Lesser", or "Equal"
-    """
-    pass
+    if number>10:
+        return "Greater"
+    if number<10:
+        return "Lesser"
+    if number>10:
+        return "Equal"
+   
 
 def loop_sum(n):
-    """
-    Calculate sum of numbers from 1 to n using a loop.
-    Args:
-        n (int): Upper limit
-    Returns:
-        int: Sum of numbers
-    """
-    pass
+    sum=0
+    for i in range(n):
+        sum=sum+i
+    return sum
+
 
 def list_operations(numbers):
-    """
-    Perform operations on a list of numbers.
-    Args:
-        numbers (list): List of numbers
-    Returns:
-        tuple: (sum, max, min)
-    """
-    pass
+    new_tuple=tuple(numbers)
+    return new_tuple
 
 def dict_operations(students_dict):
-    """
-    Find students with scores above 80.
-    Args:
-        students_dict (dict): Dictionary of student names and scores
-    Returns:
-        list: Names of students with scores > 80
-    """
-    pass
+    
+    
+    
+    student_list=list()
+    for student in students_dict:
+        if student.score > 80:
+            student_list.append(student.name)
+            return student_list
+    
 
 def set_operations(list1, list2):
-    """
-    Find common elements between two lists.
-    Args:
-        list1 (list): First list
-        list2 (list): Second list
-    Returns:
-        set: Common elements
-    """
-    pass
+    list3=list1 & list2
+    return list3
+    
 
 def arithmetic_ops(a, b):
-    """
-    Perform arithmetic operations.
-    Args:
-        a (float): First number
-        b (float): Second number
-    Returns:
-        dict: Results of arithmetic operations
-    """
-    pass
+    
+    return  dict(sum=f"{a+b}",difference=f"{a-b}",product=f"{a*b}",quotient=f"{a/b}")
 
 def logical_ops(x, y):
-    """
-    Perform logical operations.
-    Args:
-        x (bool): First boolean
-        y (bool): Second boolean
-    Returns:
-        dict: Results of logical operations
-    """
-    pass
+    {
+        'and': x and y, 
+        'or': x or y,    
+        'not_x': not x   
+    }
 
 def bitwise_ops(a, b):
-    """
-    Perform bitwise operations.
-    Args:
-        a (int): First integer
-        b (int): Second integer
-    Returns:
-        dict: Results of bitwise operations
-    """
-    pass
+    return {
+        'and': a & b,   
+        'or': a | b,   
+        'not_a': ~a     
+    }
+   
