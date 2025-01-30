@@ -20,8 +20,8 @@ def loop_sum(n):
 
 def list_operations(numbers):
     sorted_numbers=sorted(numbers)
-    min=sorted_numbers[0]
-    max=sorted_numbers[-1]
+    max=sorted_numbers[0]
+    min=sorted_numbers[-1]
     sum_num=sum(numbers)
     return (sum_num,min,max)
 
@@ -40,8 +40,9 @@ def set_operations(list1, list2):
     
 
 def arithmetic_ops(a, b):
+
     
-    return  {"sum":f"{a+b}","difference":f"{a-b}","product":f"{a*b}","quotient":f"{a/b}"}
+    return  {"sum":int(f"{a+b}"),"difference":int(f"{a-b}"),"product":int(f"{a*b}"),"quotient":int(f"{a/b}")}
 
 def logical_ops(x, y):
     return{
